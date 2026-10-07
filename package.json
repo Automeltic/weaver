@@ -1,0 +1,39 @@
+{
+  "name": "@weaver/cli",
+  "version": "1.0.0",
+  "description": "Weaver — map the intricate web of dependencies in any codebase as a live, interactive graph. Detects circular dependencies, bottleneck hot paths, and structural weaknesses from the terminal and the browser.",
+  "license": "MIT",
+  "private": false,
+  "bin": {
+    "weaver": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && mkdir -p dist/views && cp web/views/graph.html dist/views/graph.html",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@babel/parser": "7.25.9",
+    "@babel/types": "7.25.9",
+    "commander": "12.1.0",
+    "fastify": "4.28.1",
+    "graphql": "16.8.1",
+    "inquirer": "9.3.3",
+    "pino": "9.5.0",
+    "pino-pretty": "11.3.0",
+    "prompts": "2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.17.9",
+    "tsup": "8.4.0",
+    "tsx": "4.19.2",
+    "typescript": "5.5.4",
+    "vitest": "1.6.0"
+  }
+}

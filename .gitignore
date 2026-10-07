@@ -1,0 +1,37 @@
+# build output
+dist/
+
+# dependencies
+node_modules/
+
+# data
+data/
+*.sqlite
+*.sqlite-journal
+*.sqlite3
+*.db
+
+# env
+.env
+.env.local
+*.local
+
+# logs
+*.log
+logs/
+
+# os
+.DS_Store
+Thumbs.db
+
+# editor
+.idea/
+.vscode/
+*.swp
+
+# coverage
+coverage/
+.nyc_output/
+
+# artifacts
+artifacts/
